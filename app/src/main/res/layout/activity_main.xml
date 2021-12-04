@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/homePage_img"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homePage_img" />
+
+        <LinearLayout
+            android:id="@+id/indicator_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/container_outer_LL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewpager">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/container_outer_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicator_container">
+
+            <LinearLayout
+                android:id="@+id/test1"
+                style="@style/linearLayouts"
+                android:backgroundTint="@color/light_yellow"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bus"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    app:srcCompat="@drawable/maths_logo" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/textViews"
+                    android:text="Maths" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test2"
+                style="@style/linearLayouts"
+                android:backgroundTint="@color/aquamarine"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    app:srcCompat="@drawable/html_tags" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/textViews"
+                    android:gravity="center"
+                    android:text="Code" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_outer_LL">
+
+            <LinearLayout
+                android:id="@+id/test3"
+                style="@style/linearLayouts"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    app:srcCompat="@drawable/anime" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/textViews"
+                    android:text="Anime" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dev"
+                style="@style/linearLayouts"
+                android:backgroundTint="@color/light_coral"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/train"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    app:srcCompat="@drawable/home_dev" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/textViews"
+                    android:text="Dev Ref" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
